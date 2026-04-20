@@ -1,0 +1,84 @@
+:root {
+  --ink: #0c1222;
+  --ink-muted: #4a5568;
+  --surface: #f7f5f2;
+  --surface-elevated: #ffffff;
+  --border: rgba(12, 18, 34, 0.12);
+  --accent: #0f766e;
+  --accent-hover: #0d9488;
+  --accent-soft: rgba(15, 118, 110, 0.12);
+  /* Tekst op accentvlakken (knoppen): maximaal contrast */
+  --on-accent: #ffffff;
+  --warm: #c2410c;
+  --warm-soft: rgba(194, 65, 12, 0.1);
+  --radius: 12px;
+  --radius-lg: 20px;
+  --shadow: 0 4px 24px rgba(12, 18, 34, 0.08);
+  --shadow-lg: 0 20px 50px rgba(12, 18, 34, 0.12);
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-display: 'Fraunces', Georgia, serif;
+  --max: 1120px;
+  --header-h: 72px;
+
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink-muted);
+  background: var(--surface);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #f1f5f9;
+    --ink-muted: #94a3b8;
+    --surface: #0b0f17;
+    --surface-elevated: #121826;
+    --border: rgba(241, 245, 249, 0.1);
+    --accent: #2dd4bf;
+    --accent-hover: #5eead4;
+    --accent-soft: rgba(45, 212, 191, 0.12);
+    --on-accent: #0a1a1a;
+    --warm: #fb923c;
+    --warm-soft: rgba(251, 146, 60, 0.12);
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+    --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.45);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
